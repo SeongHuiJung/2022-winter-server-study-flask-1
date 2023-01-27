@@ -4,7 +4,6 @@ app = Flask(__name__)
 
 @app.route('/id/<int:id>', methods=['GET'])
 def get(id):
-
     if id >= 5000:
         data={'result':'true'}
     else:
@@ -22,4 +21,4 @@ def method_not_allowed(e):
     return jsonify(data['name'])
 
 if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0', port=5000) 
+    app.run(debug=True, host='0.0.0.0', port=5000)
