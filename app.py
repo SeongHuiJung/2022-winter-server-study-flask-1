@@ -9,7 +9,7 @@ def get(id):
         data={'result':'true'}
     else:
         data={'result':'false'}
-    return data['result']
+    return data
 
 @app.route('/id', methods=['POST'])
 def post():
@@ -22,4 +22,4 @@ def method_not_allowed(e):
     return jsonify(data['name'])
 
 if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=5000) 
