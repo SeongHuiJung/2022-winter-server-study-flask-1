@@ -18,7 +18,7 @@ def post():
 @app.errorhandler(405)
 def method_not_allowed(e):
     data={'name': 'hello','value': '52'}
-    return jsonify(data['name'])
+    return jsonify({ "name": data['name'] })
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=5000)
