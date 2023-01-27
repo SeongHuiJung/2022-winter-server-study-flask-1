@@ -5,9 +5,9 @@ app = Flask(__name__)
 @app.route('/id/<int:id>', methods=['GET'])
 def get(id):
     if id >= 5000:
-        data={'result':'true'}
+        data={'result': True }
     else:
-        data={'result':'false'}
+        data={'result': False }
     return data
 
 @app.route('/id', methods=['POST'])
