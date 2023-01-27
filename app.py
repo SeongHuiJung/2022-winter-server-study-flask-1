@@ -4,6 +4,7 @@ app = Flask(__name__)
 
 @app.route('/id/<int:id>', methods=['GET'])
 def get(id):
+    data={}
     if id >= 5000:
         data={'result': True }
     else:
