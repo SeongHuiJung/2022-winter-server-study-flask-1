@@ -13,7 +13,7 @@ def get(id):
 @app.route('/id', methods=['POST'])
 def post():
     data={'name': 'hello', 'value': '52'}
-    return jsonify(data['name'])
+    return jsonify({ "name": data['name'] })
 
 @app.errorhandler(405)
 def method_not_allowed(e):
